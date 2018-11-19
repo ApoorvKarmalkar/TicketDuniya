@@ -1,0 +1,36 @@
+@media (min-width: 1200px){
+.navbar .nav li {
+	margin-left: 100px;
+}
+}
+.navbar-default {
+	background-color: #F44336;
+	height: 70px;
+}
+@media (max-width: 768px) {
+	.navbar-default {
+	height: auto;
+}
+}
+#nav-demo .navbar-nav li a {
+	color: white;
+	font-weight: bold;
+	margin-top: 8px;
+	font-size: 15px;
+}
+#nav-demo .navbar-nav li a:hover {
+	box-shadow: 5px 5px 5px grey;
+	background-color: white;
+	border-radius: 4px 4px 4px 4px;
+	color: black;
+}
+.navbar .navbar-brand {
+	color: black;
+	font-weight: bold;
+	font-family: 'Righteous', cursive;
+	font-size: 30px;
+	margin-top: 3px;               
+}
+.navbar .navbar-brand:hover {
+	color: black;
+}

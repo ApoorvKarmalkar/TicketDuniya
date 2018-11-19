@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ticket Duniya</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="navbar.css">
+	<link rel="stylesheet" type="text/css" href="index-css.css">
+	<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="bootstrap.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-default">
+		<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-demo" aria-expanded="false">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand"><i class="fas fa-ticket-alt"></i> Ticket Duniya</a>
+		</div>
+		 <div class="collapse navbar-collapse" id="nav-demo">
+		 	<ul class="nav navbar-nav">
+		 		<li class="home_li"><a href="#">Home</a></li>
+		 		<li><a href="#">Movies</a></li>
+		 		<li><a href="#">Events</a></li>
+		 		<li><a href="#">Plays</a></li>
+		 		<li><a href="#">Sports</a></li>
+		 	</ul>
+		</div>
+		</div>
+	</nav>
+<div id="main_div" class="row">
+	<div id="left_div" class="col-lg-3">
+		<form method="POST" action="/city">
+		<select id="city_search" name="city">
+			<option value="" disabled>City</option>
+			<option value="Bhopal">Bhopal</option>
+			<option value="Mumbai">Mumbai</option>
+			<option value="Kolkata">Kolkata</option>
+			<option value="Delhi NCR">Delhi NCR</option>
+		</select>
+		<input type="submit" value="submit"/>
+		</form>
+		<form method="GET" action="/search">
+			<div id="search_bar" class="input-group">
+				<input type="text" class="form-control" placeholder="Search Movies Database" name="search">
+				<div class="input-group-btn">
+					<button class="btn btn-default" type="submit"><span class="fas fa-search"></span></button>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div id="right_div" class="col-lg-9">
+		<h2>Movies</h2>
+		<div id="movie-carousel" class="carousel slide" data-ride="carousel">
+    		<div class="carousel-inner">
+      			<div class="item active">
+        		<img src="<%=resultVar%>">
+      			</div>
+      			<div class="item">
+        		<img src="<%=resultVar2%>">
+      			</div>   
+      			<div class="item">
+        		<img src="<%=resultVar3%>">
+      			</div>
+    		</div>
+    		<a class="left carousel-control" href="#movie-carousel" data-slide="prev">
+      		<span class="glyphicon glyphicon-chevron-left"></span>
+    		</a>
+    		<a class="right carousel-control" href="#movie-carousel" data-slide="next">
+      		<span class="glyphicon glyphicon-chevron-right"></span>
+    		</a>
+  		</div>
+	</div>
+</div>
+</body>
+</html>
