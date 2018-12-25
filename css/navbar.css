@@ -6,6 +6,7 @@
 .navbar-default {
 	background-color: #F44336;
 	height: 70px;
+	border: 0px;
 }
 @media (max-width: 768px) {
 	.navbar-default {

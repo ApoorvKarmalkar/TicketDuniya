@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>Movies</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="/navbar.css">
+	<link rel="stylesheet" type="text/css" href="/movies-css.css">
+	<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="bootstrap.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+		<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-demo" aria-expanded="false">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="#" class="navbar-brand"><i class="fas fa-ticket-alt"></i> Ticket Duniya</a>
+		</div>
+		 <div class="collapse navbar-collapse" id="nav-demo">
+		 	<ul class="nav navbar-nav">
+		 		<li class="home_li"><a href="/">Home</a></li>
+		 		<li><a href="/:city/movies">Movies</a></li>
+		 		<li><a href="#">Events</a></li>
+		 		<li><a href="#">Plays</a></li>
+		 		<li><a href="#">Sports</a></li>
+		 	</ul>
+		</div>
+		</div>
+	</nav>
+	<div class="container">
+	<div id="main_div" class="row">
+		<h2>Movies</h2>
+		<% resultVar.forEach(function(movies) { %>
+	    <div class="col-lg-4 col-sm-6"> 
+			<div class="thumbnail">
+				<a href="#"><img src="/<%=movies.poster%>"></a>
+			</div>
+		</div>
+		<% }); %>
+	</div>
+	</div>
+    </body>
+</html>
