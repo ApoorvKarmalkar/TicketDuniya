@@ -20,15 +20,18 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a href="#" class="navbar-brand"><i class="fas fa-ticket-alt"></i> Ticket Duniya</a>
+			<a href="/" class="navbar-brand"><i class="fas fa-ticket-alt"></i> Ticket Duniya</a>
 		</div>
 		 <div class="collapse navbar-collapse" id="nav-demo">
 		 	<ul class="nav navbar-nav">
-		 		<li class="home_li"><a href="/">Home</a></li>
 		 		<li><a href="/:city/movies">Movies</a></li>
 		 		<li><a href="#">Events</a></li>
 		 		<li><a href="#">Plays</a></li>
-		 		<li><a href="#">Sports</a></li>
+		 		<% if(locals.sessLogin){ %>
+		 		<li><a href="#"><span class="fas fa-user"></span> <%=sessLogin%></a></li>
+		 		<% } else {%>
+		 		<li><a href="#"><span class="fas fa-user"></span> Login/Signup</a></li>
+		 		<% } %>
 		 	</ul>
 		</div>
 		</div>
